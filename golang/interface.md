@@ -4,14 +4,12 @@ title: 接口
 ---
 
 ### 概念
-<ul>
-<li>无须明确一个类型是否实现了一个接口</li>
-<li>实现接口使用方法，不能用函数</li>
-<li>每个类型都能匹配到空接口<code>interface{}</code></li>
-<li>在switch之外使用类型判断<code>.(type)</code>是非法的</li>
-<li>类型断言<code>.(I)</code></li>
-<li>单方法接口命名为方法名加上-er，例如Reader,Writer,Formatter等</li>
-</ul>
+* 无须明确一个类型是否实现了一个接口
+* 实现接口使用方法，不能用函数
+* 每个类型都能匹配到空接口`interface{}`
+* 在switch之外使用类型判断`.(type)`是非法的
+* 类型断言`.(I)`
+* 单方法接口命名为方法名加上-er，例如Reader,Writer,Formatter等
 
 ### 定义接口
 {% highlight java %}

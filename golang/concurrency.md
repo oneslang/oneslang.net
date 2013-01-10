@@ -4,12 +4,10 @@ title: 并发
 ---
 
 ### 概念
-<ul>
-<li>Go使用channel和goroutine开发并行程序</li>
-<li>利用<code>runtime.GOMAXPROCS(n)</code>可以设置goroutine并行执行的数量</li>
-<li><code>ch := make(chan type, value)</code>当value == 0时为无缓冲的阻塞的</li>
-<li><code>ch := make(chan type, value)</code>当value > 0时为缓冲的非阻塞的</li>
-</ul>
+* Go使用channel和goroutine开发并行程序
+* 利用`runtime.GOMAXPROCS(n)`可以设置goroutine并行执行的数量
+* `ch := make(chan type, value)`当value == 0时为无缓冲的阻塞的
+* `ch := make(chan type, value)`当value > 0时为缓冲的非阻塞的
 
 ### goroutine
 {% highlight java %}

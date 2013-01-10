@@ -4,22 +4,19 @@ title: 基础
 ---
 
 ### 概念
-<ul>
-<li>不是<code>main</code>的其他包都被称为库</li>
-<li>变量声明赋值<code>:=</code>只可用在函数内</li>
-<li>常量只能是数字、字符串或布尔值，可以使用<code>iota</code>生成枚举值</li>
-<li>单个字符用单引号<code>'</code>，字符串用双引号<code>"</code>，多行字符用反引号<code>`</code></li>
-<li>在Go中字符串是不可变的，一旦赋值就不能修改了</li>
-<li>用<code>goto</code>跳转到一定是当前函数内定义的标签</li>
-<li>数组长度是数组类型的一部分，因此不能改变数组长度，<code>[3]int</code>和<code>[5]int</code>是不同类型</li>
-</ul>
+* 不是`main`的其他包都被称为库
+* 变量声明赋值`:=`只可用在函数内
+* 常量只能是数字、字符串或布尔值，可以使用`iota`生成枚举值
+* 单个字符用单引号`'`，字符串用双引号`"`，多行字符用反引号`` ` ``
+* 在Go中字符串是不可变的，一旦赋值就不能修改了
+* 用`goto`跳转到一定是当前函数内定义的标签
+* 数组长度是数组类型的一部分，因此不能改变数组长度，`[3]int`和`[5]int`是不同类型
 
 ### 值类型
-
 * string
 * bool
-* int(int32 | int64), int8, int16, int32, int64
-* uint(uint32 | uint64), uint8, uint16, uint32, uint64
+* int(int32〡int64), int8, int16, int32, int64
+* uint(uint32〡uint64), uint8, uint16, uint32, uint64
 * byte(uint8)
 * rune(int32)
 * float32, float64
@@ -27,7 +24,6 @@ title: 基础
 * array
 
 ### 引用类型
-
 * slice
 * map
 * chan
@@ -175,27 +171,29 @@ Here:
 {% endhighlight %}
 
 ### for
-	sum := 0
+{% highlight java %}
+sum := 0
+for i := 0; i < 10; i++ {
+	sum += i
+}
+
+for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+	a[i], a[j] = a[j], a[i]
+}
+
+J: for j := 0; j < 5; j++ {
 	for i := 0; i < 10; i++ {
-		sum += i
+	    if i > 5 {
+	        break J   // 现在终止的是变量j循环，而不是变量i的那个
+	    }
+	    println(i)
 	}
+}
 
-	for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
-		a[i], a[j] = a[j], a[i]
-	}
-
-	J: for j := 0; j < 5; j++ {
-		for i := 0; i < 10; i++ {
-		    if i > 5 {
-		        break J   // 现在终止的是变量j循环，而不是变量i的那个
-		    }
-		    println(i)
-		}
-	}
-
-	for pos, char := range "ax" {
-		fmt.Printf("character '%c' starts at byte position %d\n", char, pos)
-	}
+for pos, char := range "ax" {
+	fmt.Printf("character '%c' starts at byte position %d\n", char, pos)
+}
+{% endhighlight %}
 
 ### switch
 {% highlight java %}
@@ -222,5 +220,4 @@ switch i {
         println(i) // 当无符合条件时执行
 }
 {% endhighlight %}
-
 
