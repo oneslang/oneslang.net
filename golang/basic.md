@@ -29,7 +29,7 @@ title: 基础
 * chan
 
 ### 常量
-{% highlight java %}
+{% highlight go %}
 const ( // 常量只能是数字、字符串或布尔值
     a = 0
     b = 0.0
@@ -52,7 +52,7 @@ const (
 {% endhighlight %}
 
 ### 变量
-{% highlight java %}
+{% highlight go %}
 // 变量声明：
 var a int
 var b bool
@@ -83,13 +83,13 @@ _, b := 34, 35
 {% endhighlight %}
 
 ### 字符串
-{% highlight java %}
+{% highlight go %}
 s := `Starting part
       Ending part`
 {% endhighlight %}
 
 ### array
-{% highlight java %}
+{% highlight go %}
 var a [3]int
 a := [3]int{1, 2, 3}
 a := [...]int{1, 2, 3} // Go会自动统计元素的个数
@@ -100,7 +100,7 @@ a := [2][2]int{ {1,2}, {3,4} } // 元素复合声明的类型与外部一直时�
 {% endhighlight %}
 
 ### slice
-{% highlight java %}
+{% highlight go %}
 sl := make([]int, 10)
 
 a := [...]int{1, 2, 3, 4, 5}
@@ -122,7 +122,7 @@ n2 := copy(s, s[2:])   // n2 == 4, s == []int{2, 3, 4, 5, 4, 5}
 {% endhighlight %}
 
 ### map
-{% highlight java %}
+{% highlight go %}
 monthdays := map[string]int{
     "Jan": 31, "Feb": 28, "Mar": 31,
     "Apr": 30, "May": 31, "Jun": 30,
@@ -144,7 +144,7 @@ delete(monthdays, "Mar")  // 删除元素
 {% endhighlight %}
 
 ### if
-{% highlight java %}
+{% highlight go %}
 if x < 0 {
     return false
 } else if x > 0 && x < 100 {
@@ -160,7 +160,7 @@ if err := file.Chmod(0664); err != nil {
 {% endhighlight %}
 
 ### goto
-{% highlight java %}
+{% highlight go %}
 func myfunc() {
     i := 0
 Here:
@@ -171,7 +171,7 @@ Here:
 {% endhighlight %}
 
 ### for
-{% highlight java %}
+{% highlight go %}
 sum := 0
 for i := 0; i < 10; i++ {
 	sum += i
@@ -196,7 +196,7 @@ for pos, char := range "ax" {
 {% endhighlight %}
 
 ### switch
-{% highlight java %}
+{% highlight go %}
 func unhex(c byte) byte {
     switch {
         case '0' <= c && c <= '9':

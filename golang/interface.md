@@ -12,7 +12,7 @@ title: 接口
 * 单方法接口命名为方法名加上-er，例如Reader,Writer,Formatter等
 
 ### 定义接口
-{% highlight java %}
+{% highlight go %}
 type I interface {
     Get() int
     Put(int)
@@ -20,7 +20,7 @@ type I interface {
 {% endhighlight %}
 
 ### 实现接口
-{% highlight java %}
+{% highlight go %}
 type S struct { i int }
 func (p *S) Get() int { return p.i }
 func (p *S) Put(v int) { p.i = v }
@@ -31,7 +31,7 @@ func (p *R) Put(v int) { p.i = v }
 {% endhighlight %}
 
 ### 类型判断
-{% highlight java %}
+{% highlight go %}
 func f(p I) {
     switch t := p.(type) {
         case *S:
@@ -44,7 +44,7 @@ func f(p I) {
 {% endhighlight %}
 
 ### 类型断言
-{% highlight java %}
+{% highlight go %}
 if t, ok := something.(I); ok {
     // 对于某些实现了接口I 的
     // t 是其所拥有的类型
@@ -52,7 +52,7 @@ if t, ok := something.(I); ok {
 {% endhighlight %}
 
 ### 空接口
-{% highlight java %}
+{% highlight go %}
 func g(something interface{}) int { // 用空接口作为参数
     return something.(I).Get() // 类型断言
 }

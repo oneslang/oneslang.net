@@ -10,7 +10,7 @@ title: 函数
 * 延迟函数是按照后进先出的顺序执行
 
 ### 作用域
-{% highlight java %}
+{% highlight go %}
 package main
 var a = 6
 func main() {
@@ -28,7 +28,7 @@ func q() {
 {% endhighlight %}
 
 ### 多个返回值
-{% highlight java %}
+{% highlight go %}
 func nextInt(b []byte, i int) (int, int) {
     x := 0
     // 假设所有的都是数字
@@ -40,7 +40,7 @@ func nextInt(b []byte, i int) (int, int) {
 {% endhighlight %}
 
 ### 命名返回参数
-{% highlight java %}
+{% highlight go %}
 func ReadFull(r Reader, buf []byte) (n int, err os.Error) {
     for len(buf) > 0 && err == nil {
         var nr int
@@ -53,7 +53,7 @@ func ReadFull(r Reader, buf []byte) (n int, err os.Error) {
 {% endhighlight %}
 
 ### 延迟的代码
-{% highlight java %}
+{% highlight go %}
 func ReadWrite() bool {
     file.Open("file")
     defer file.Close()
@@ -74,7 +74,7 @@ defer func(x int) {
 {% endhighlight %}
 
 ### 变参
-{% highlight java %}
+{% highlight go %}
 func myfunc(arg ...int) {}
     for _, n := range arg {
         fmt.Printf("And the number is: %d\n", n)
@@ -83,7 +83,7 @@ func myfunc(arg ...int) {}
 {% endhighlight %}
 
 ### 函数作为值
-{% highlight java %}
+{% highlight go %}
 func main() {
     a := func() {   // 定义一个匿名函数，并且赋值给a
         println("Hello")
@@ -93,14 +93,14 @@ func main() {
 {% endhighlight %}
 
 ### 回调
-{% highlight java %}
+{% highlight go %}
 func callback(y int, f func(int)) {   // f 将会保存函数
     f(y)   // 调用回调函数f 输入变量y
 }
 {% endhighlight %}
 
 ### 恐慌（Panic）和恢复（Recover）
-{% highlight java %}
+{% highlight go %}
 func throwsPanic(f func()) (b bool) {
     defer func() {
         if x := recover(); x != nil {

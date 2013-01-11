@@ -13,7 +13,7 @@ title: 包
 * 对于多文件包注释只需要出现在任意其中一个文件前即可
 
 ### 公有私有函数
-{% highlight java %}
+{% highlight go %}
 package even
 func Even(i int) bool { // 公有函数：首字母大写
 	return i % 2 == 0
@@ -24,7 +24,7 @@ func odd(i int) bool { // 私有函数：首字母小写
 {% endhighlight %}
 
 ### 导入包
-{% highlight java %}
+{% highlight go %}
 package main
 import (
 	e "./even" // 相对路径方式导入用户库；用别名访问该包公有成员

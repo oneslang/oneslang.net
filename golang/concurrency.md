@@ -10,13 +10,13 @@ title: 并发
 * `ch := make(chan type, value)`当value > 0时为缓冲的非阻塞的
 
 ### goroutine
-{% highlight java %}
+{% highlight go %}
 ready("Tea", 2) // 普通函数调用
 go ready("Tea", 2) // 作为goroutine运行
 {% endhighlight %}
 
 ### channel
-{% highlight java %}
+{% highlight go %}
 ci := make(chan int)
 ci <- 1   // 发送整数1到channel ci
 <-ci      // 从channel ci 接收整数
@@ -24,7 +24,7 @@ i := <-ci // 从channel ci 接收整数，并保存到i中
 {% endhighlight %}
 
 ### select
-{% highlight java %}
+{% highlight go %}
 package main
 
 import (

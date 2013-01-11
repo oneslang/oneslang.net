@@ -4,7 +4,7 @@ title: 备忘
 ---
 
 ### 按位与、按位或运算符经典用法
-{% highlight java %}
+{% highlight go %}
 // 以golang的log包为例
 const (
 	//	2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
@@ -30,8 +30,8 @@ if l.flag&(LstdFlags|Lshortfile) != 0 {
 {% endhighlight %}
 
 ### 遍历文件夹
-{% highlight java %}
-filepath.Walk("./usr", func(subpath string, f os.FileInfo, err error) error {
+{% highlight go %}
+filepath.Walk("/usr", func(subpath string, f os.FileInfo, err error) error {
 	if err != nil {
 		return err
 	}

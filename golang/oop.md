@@ -63,7 +63,7 @@ public class M {
 {% endhighlight %}
 
 ### Go代码
-{% highlight java %}
+{% highlight go %}
 // oop.go
 package oop
 import "fmt"
