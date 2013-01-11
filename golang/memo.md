@@ -29,14 +29,6 @@ if l.flag&(LstdFlags|Lshortfile) != 0 {
 }
 {% endhighlight %}
 
-### 变参传递方法
-{% highlight java %}
-func Info(v ...interface{}) {
-	fmt.Println(v)    // 错误写法
-	fmt.Println(v...) // 正确写法
-}
-{% endhighlight %}
-
 ### 遍历文件夹
 {% highlight java %}
 filepath.Walk("./usr", func(subpath string, f os.FileInfo, err error) error {
