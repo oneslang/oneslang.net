@@ -5,6 +5,7 @@ title: 基础
 
 ### 概念
 * 不是`main`的其他包都被称为库
+* 未显式初始化的变量都会被初始化为该类型的零值
 * 变量声明赋值`:=`只可用在函数内
 * 常量只能是数字、字符串或布尔值，可以使用`iota`生成枚举值
 * 单个字符用单引号`'`，字符串用双引号`"`，多行字符用反引号`` ` ``
@@ -12,21 +13,50 @@ title: 基础
 * 用`goto`跳转到一定是当前函数内定义的标签
 * 数组长度是数组类型的一部分，因此不能改变数组长度，`[3]int`和`[5]int`是不同类型
 
-### 值类型
-* string
-* bool
-* int(int32〡int64), int8, int16, int32, int64
-* uint(uint32〡uint64), uint8, uint16, uint32, uint64
-* byte(uint8)
-* rune(int32)
-* float32, float64
-* complex64, complex128
-* array
+### 关键字
+{% highlight go %}
+break    default      func    interface    select
+case     defer        go      map          struct
+chan     else         goto    package      switch
+const    fallthrough  if      range        type
+continue for          import  return       var
+{% endhighlight %}
 
-### 引用类型
-* slice
-* map
-* chan
+### 基本类型
+* 字符串：string
+* 布尔：bool
+* 整数：int(int32〡int64), int8, int16, int32, int64
+* 无符号整数：uint(uint32〡uint64), uint8, uint16, uint32, uint64, uintptr
+* 字节：byte(uint8)
+* 字符：rune(int32)
+* 浮点：float32, float64
+* 复数：complex64, complex128
+* 错误：error
+
+### 复合类型
+* 指针：pointer
+* 数组：array
+* 切片：slice
+* 映射：map
+* 信道：chan
+* 结构体：struct
+* 接口：interface
+
+### 零值
+{% highlight go %}
+string    ""
+bool      false
+*int*     0
+float*    0.000000
+complex*  0.000000+0.000000i
+array     元素零值对应类型的零值
+struct    元素零值对应类型的零值
+// slice|map|chan:非零
+// slice|map:通过make元素初始值对应类型的零值
+// *int*:int,int8,int16,int32(rune),int64,uint,uint8(byte),uint16,uint32,uint64,uintptr
+// float*:float32,float64
+// complex*:complex64,complex128
+{% endhighlight %}
 
 ### 常量
 {% highlight go %}
@@ -54,35 +84,35 @@ const (
 ### 变量
 {% highlight go %}
 // 变量声明：
-var a int
+var a, c int
 var b bool
 
 // 变量声明赋值：
-var a int = 15
+var a, c int = 15, 20
 var b bool = true
 
 // 变量类型推断：
-var a = 15
+var a, c = 15, 20
 var b = true
 
 // 简写方式（只可用在函数内）：
-a := 15
+a, c := 15, 20
 b := true
 
 // 多个变量声明：
 var (
-    a int
+    a, c int
     b bool = true
 )
 
 // 平行赋值：
-a, b := 20, 16
+a, b := 20, true
 
 // 特殊的变量名：任何赋给它的值都被丢弃
-_, b := 34, 35
+_, c := 15, 20
 {% endhighlight %}
 
-### 字符串
+### string
 {% highlight go %}
 s := `Starting part
       Ending part`
@@ -119,6 +149,8 @@ var a = [...]int{0, 1, 2, 3, 4, 5, 6, 7}
 var s = make([]int, 6)
 n1 := copy(s, a[0:])   // n1 == 6, s == []int{0, 1, 2, 3, 4, 5}
 n2 := copy(s, s[2:])   // n2 == 4, s == []int{2, 3, 4, 5, 4, 5}
+l := len(n2)
+c := cap(n2)
 {% endhighlight %}
 
 ### map
