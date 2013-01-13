@@ -8,7 +8,10 @@ title: 接口
 * 实现接口使用方法，不能用函数
 * 每个类型都能匹配到空接口`interface{}`
 * 在switch之外使用类型判断`.(type)`是非法的
+* 类型判断`v.(type)`的v是interface或者interface{}
 * 类型断言`.(I)`
+* 类型断言`v.(I)`的v是interface或者interface{}
+* 类型断言`v.(I)`的I是interface或者struct或者pointer等
 * 单方法接口命名为方法名加上-er，例如Reader,Writer,Formatter等
 
 ### 定义接口
@@ -21,33 +24,58 @@ type I interface {
 
 ### 实现接口
 {% highlight go %}
-type S struct { i int }
-func (p *S) Get() int { return p.i }
-func (p *S) Put(v int) { p.i = v }
+type S struct{ i int }
+func (me *S) Get() int  { return me.i }
+func (me *S) Set(v int) { me.i = v }
 
-type R struct { i int }
-func (p *R) Get() int { return p.i }
-func (p *R) Put(v int) { p.i = v }
+type R struct{ i int }
+func (me *R) Get() int  { return me.i }
+func (me *R) Set(v int) { me.i = v }
 {% endhighlight %}
 
 ### 类型判断
 {% highlight go %}
-func f(p I) {
-    switch t := p.(type) {
-        case *S:
-        case *R:
-        case S:
-        case R:
-        default:
-    }
+var v I = &S{1}
+switch t := v.(type) {
+case *S:
+	fmt.Printf("type:*S,value:%d\n", t.Get())
+case *R:
+	fmt.Printf("type:*R,value:%d\n", t.Get())
+default:
+	fmt.Println("default")
+}
+{% endhighlight %}
+
+
+{% highlight go %}
+var v interface{} = 1
+switch t := v.(type) {
+case int:
+	fmt.Printf("type:int,value:%d\n", t)
+case string:
+	fmt.Printf("type:string,value:%s\n", t)
+default:
+	fmt.Println("default")
 }
 {% endhighlight %}
 
 ### 类型断言
 {% highlight go %}
-if t, ok := something.(I); ok {
-    // 对于某些实现了接口I 的
-    // t 是其所拥有的类型
+v := &S{1}
+if i, ok := v.(I); ok {
+	fmt.Printf("type:I,value:%d\n", i.Get())
+} else {
+	fmt.Println("not I")
+}
+{% endhighlight %}
+
+
+{% highlight go %}
+var v I = &R{1}
+if r, ok := v.(*R); ok {
+	fmt.Printf("type:*R,value:%d\n", r.Get())
+} else {
+	fmt.Println("not *R")
 }
 {% endhighlight %}
 
