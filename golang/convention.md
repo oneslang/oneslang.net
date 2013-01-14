@@ -70,7 +70,8 @@ title: 惯例
 
 ##### 项目包文件命名
 * 分类从大到小
-* 分割符使用`.`
+* 间隔符使用`.`
+* 例外：测试文件和示例文件
 * 例如：api.factory.go、api.session.go、core.factory.go、core.session.go
 * 参考：github.com/oneslang/db
 
