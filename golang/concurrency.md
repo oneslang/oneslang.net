@@ -28,13 +28,26 @@ c <- 1   // 发送整数1到channel c
 i := <-c // 从channel c 接收整数，并保存到i中
 {% endhighlight %}
 
-### buffered
+### 缓冲channel
 {% highlight go %}
 c := make(chan int, 2) // 修改2为1就报错，修改2为3可以正常运行
 c <- 1
 c <- 2
 fmt.Println(<-c)
 fmt.Println(<-c)
+{% endhighlight %}
+
+### 单向channel
+{% highlight go %}
+var c1 chan<- int // 只用于写int数据
+var c2 <-chan int // 只用于读int数据
+{% endhighlight %}
+
+### 关闭channel
+{% highlight go %}
+c := make(chan int)
+c <- 1
+close(c)
 {% endhighlight %}
 
 ### range
@@ -45,13 +58,6 @@ c <- 2
 for v := range c {
 	fmt.Println(v)
 }
-{% endhighlight %}
-
-### close
-{% highlight go %}
-c := make(chan int)
-c <- 1
-close(c)
 {% endhighlight %}
 
 ### select
