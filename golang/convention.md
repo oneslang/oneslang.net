@@ -50,6 +50,10 @@ title: 惯例
 * 优：bufio.Reader
 * 劣：bufio.BufReader
 
+##### 字符串转换方法命名
+* 对：String
+* 错：ToString
+
 ##### 接口命名
 * 仅一个方法的接口命名方式：`方法名+er`
 * 例如：Reader、Writer、Formatter等等
