@@ -37,8 +37,11 @@ title: 惯例
 
 ##### 文档示例函数命名
 * 前缀：`Example`
-* 输出：`// Output:`
 * 例如：ExampleTemplate、ExampleTemplate_glob、ExampleTemplate_share
+
+##### 文档示例函数输出
+* 格式：`// Output:`
+* 例如：// Output:oneslang
 
 ##### 分号
 * 一行单个语句：无需分号
