@@ -11,12 +11,3 @@ func Info(v ...interface{}) {
 }
 {% endhighlight %}
 
-### 递归结构：必须使用指针类型
-{% highlight go %}
-type Org struct {
-	Name   string
-	Parent Org  // 错误写法
-	Parent *Org // 正确写法
-}
-{% endhighlight %}
-
