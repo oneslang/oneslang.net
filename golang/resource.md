@@ -11,6 +11,8 @@ title: 资源
 ### 论坛
 * [Golang中国](http://www.golang.tc)
 * [Go语言学习园地论坛](http://bbs.studygolang.com)
+* [Golang交流社区](http://bbs.gocn.im)
+* [GOLANG中国](http://www.golangcn.com)
 
 ### 博客
 * [Go语言学习园地博客](http://blog.studygolang.com)
