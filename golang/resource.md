@@ -25,8 +25,10 @@ title: 资源
 * [runtime](http://runtime.diandian.com/)
 
 ### 文章
+* [Rob Pike：走进Go语言](http://www.csdn.net/article/2012-11-01/2811380-Go-in-Google)
+* [Go语言之父谈Go：大道至简](http://www.csdn.net/article/2012-07-04/2807113-less-is-exponentially-more)
 * [Go语言Interface漫谈](http://www.infoq.com/cn/articles/go-interface-talk)
-* [少即是极多](http://coolshell.cn/articles/7771.html)
+* [我们为什么要使用Go语言](http://www.csdn.net/article/2012-08-15/2808669)
 * [Go，基于连接与组合的语言（上）](http://www.infoq.com/cn/articles/go-based-on-connection-combination-language-1)
 * [Go-简洁的并发](http://www.yankay.com/go-clear-concurreny)
 * [Go语言_反射篇](http://www.cnblogs.com/yjf512/archive/2012/06/10/2544391.html)
