@@ -19,15 +19,27 @@ title: 资源
 * [golang.in](http://golang.in)
 * [Golang技术博客](http://beego.me)
 * [Ajian](http://www.ohlinux.com/category/golang)
+* [Rhino](http://golanger.cn/?cat=3)
+* [mikespook](http://www.mikespook.com/tag/golang)
+* [叶剑峰](http://www.cnblogs.com/yjf512/category/385369.html)
+* [runtime](http://runtime.diandian.com/)
 
 ### 文章
+* [Go语言Interface漫谈](http://www.infoq.com/cn/articles/go-interface-talk)
+* [少即是极多](http://coolshell.cn/articles/7771.html)
+* [Go，基于连接与组合的语言（上）](http://www.infoq.com/cn/articles/go-based-on-connection-combination-language-1)
 * [Go-简洁的并发](http://www.yankay.com/go-clear-concurreny)
+* [Go语言_反射篇](http://www.cnblogs.com/yjf512/archive/2012/06/10/2544391.html)
+* [Go 语言简介（下）— 特性](http://coolshell.cn/articles/8489.html)
+* [Go 1.1 函数调用](http://bbs.gocn.im/thread-118-1-1.html)
 
 ### 工具
 * [LiteIDE](https://code.google.com/p/golangide)
 * [Gocode](https://github.com/nsf/gocode)
 * [Go在线运行](http://play.golang.org)
 * [Go代码库在线文档](http://godoc.org)
+* [Go在线正则表达式](http://regoio.herokuapp.com)
+* [Go在线例子](https://gobyexample.com)
 
 ### 书籍
 * 《Google Go: A Primer》
@@ -36,7 +48,8 @@ title: 资源
 
 * 《A Tour of Go》
 [英文](http://tour.golang.org/#1)
-[中文](http://go-tour-zh.appsp0t.com/#1)
+[中文1](http://tour.golanger.com/#1)
+[中文2](http://tour.golang.tc/#1)
 
 * 《Learning Go》
 [英文](http://www.miek.nl/projects/learninggo/index.html)
@@ -44,6 +57,9 @@ title: 资源
 
 * 《Go Web 编程》
 [中文](https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md)
+
+* 《Go 学习笔记》
+[中文](https://github.com/qyuhen/book)
 
 * 《An Introduction to Programming in Go》
 [英文](http://www.golang-book.com)
@@ -61,5 +77,10 @@ title: 资源
 [英文](http://www.qtrac.eu/gobook.html)
 
 ### 项目
+* [revel](https://github.com/robfig/revel)
+* [mux](https://github.com/gorilla/mux)
 * [go-mysql-driver](https://code.google.com/p/go-mysql-driver)
 * [mgo](https://launchpad.net/mgo)
+* [gorp](https://github.com/coopernurse/gorp)
+* [hood](https://github.com/eaigner/hood)
+
