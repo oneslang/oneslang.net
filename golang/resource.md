@@ -5,7 +5,8 @@ title: 资源
 
 ### 官方
 * [官网](http://golang.org)
-[翻译](http://zh-golang.appsp0t.com)
+[翻译1](http://zh-golang.appsp0t.com)
+[翻译2](http://zh.golanger.com)
 * [源码](https://code.google.com/p/go)
 
 ### 论坛
