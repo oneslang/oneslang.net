@@ -32,6 +32,7 @@ title: 资源
 * [我们为什么要使用Go语言](http://www.csdn.net/article/2012-08-15/2808669)
 * [Go，基于连接与组合的语言（上）](http://www.infoq.com/cn/articles/go-based-on-connection-combination-language-1)
 * [Go-简洁的并发](http://www.yankay.com/go-clear-concurreny)
+* [goroutine背后的系统知识](http://www.sizeofvoid.net/goroutine-under-the-hood)
 * [Go语言_反射篇](http://www.cnblogs.com/yjf512/archive/2012/06/10/2544391.html)
 * [Go 语言简介（下）— 特性](http://coolshell.cn/articles/8489.html)
 * [Go 1.1 函数调用](http://bbs.gocn.im/thread-118-1-1.html)
