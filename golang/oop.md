@@ -66,10 +66,9 @@ public class M {
 {% highlight go %}
 // oop.go
 package oop
-import "fmt"
 var gs string = ":global(static):"
 func Gf(s, ss string) {
-	fmt.Println(s + gs + ss)
+	println(s + gs + ss)
 }
 type I interface {
 	M(s string) int
@@ -77,11 +76,11 @@ type I interface {
 }
 type P struct{}
 func (p *P) M(s string) int {
-	fmt.Println(s)
+	println(s)
 	return 1
 }
 func (p *P) MM(s, ss string) int { // Go语言不支持函数重载
-	fmt.Println(s + ":" + ss)
+	println(s + ":" + ss)
 	return 1
 }
 type C struct {
@@ -96,7 +95,7 @@ func (c *C) M(s string) int {
 	return 1
 }
 func (c *C) pm(s string) {
-	fmt.Println(s + c.ps)
+	println(s + c.ps)
 }
 
 // main.go

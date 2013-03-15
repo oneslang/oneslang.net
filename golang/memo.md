@@ -36,7 +36,7 @@ filepath.Walk("/usr", func(subpath string, f os.FileInfo, err error) error {
 		return err
 	}
 	if f.IsDir() == false {
-		fmt.Println(f.Name())
+		println(f.Name())
 	}
 	return nil
 })

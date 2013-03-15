@@ -42,7 +42,7 @@ case *S:
 case *R:
 	fmt.Printf("type:*R,value:%d\n", t.Get())
 default:
-	fmt.Println("default")
+	println("default")
 }
 {% endhighlight %}
 
@@ -55,7 +55,7 @@ case int:
 case string:
 	fmt.Printf("type:string,value:%s\n", t)
 default:
-	fmt.Println("default")
+	println("default")
 }
 {% endhighlight %}
 
@@ -65,7 +65,7 @@ v := &S{1}
 if i, ok := v.(I); ok {
 	fmt.Printf("type:I,value:%d\n", i.Get())
 } else {
-	fmt.Println("not I")
+	println("not I")
 }
 {% endhighlight %}
 
@@ -75,7 +75,7 @@ var v I = &R{1}
 if r, ok := v.(*R); ok {
 	fmt.Printf("type:*R,value:%d\n", r.Get())
 } else {
-	fmt.Println("not *R")
+	println("not *R")
 }
 {% endhighlight %}
 
