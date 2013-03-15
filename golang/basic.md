@@ -68,6 +68,12 @@ const ( // 常量只能是数字、字符串或布尔值
 )
 
 const (
+    a = "abc"  // a == "abc"
+    b          // b == "abc" (可以省略重复的赋值)
+    c = len(a) // c == 3 (常量值可以是len()、cap()、unsafe.Sizeof()常量计算表达式的值)
+)
+
+const (
     a = iota // a == 0 (iota在每个const开头都会被重设为0)
     b        // b == 1 (可以省略重复的赋值，当iota再次在新的一行使用时，它的值会增加1)
 )
