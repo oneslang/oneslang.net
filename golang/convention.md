@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: convention
 title: 惯例
 ---
 

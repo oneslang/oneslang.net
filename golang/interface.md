@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: interface
 title: 接口
 ---
 

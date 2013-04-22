@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: resource
 title: 资源
 ---
 
@@ -88,4 +90,3 @@ title: 资源
 * [gorp](https://github.com/coopernurse/gorp)
 * [hood](https://github.com/eaigner/hood)
 * [gopher](https://github.com/jimmykuu/gopher)
-

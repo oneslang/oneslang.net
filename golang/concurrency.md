@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: concurrency
 title: 并发
 ---
 

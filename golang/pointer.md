@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: pointer
 title: 指针
 ---
 

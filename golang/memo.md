@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: memo
 title: 备忘
 ---
 

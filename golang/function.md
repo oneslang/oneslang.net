@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: function
 title: 函数
 ---
 

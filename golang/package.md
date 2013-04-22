@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: package
 title: 包
 ---
 

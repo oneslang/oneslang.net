@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: puzzle
 title: 解惑
 ---
 

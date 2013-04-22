@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: basic
 title: 基础
 ---
 

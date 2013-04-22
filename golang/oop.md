@@ -1,5 +1,7 @@
 ---
 layout: page
+category: golang
+name: oop
 title: OOP
 ---
 
