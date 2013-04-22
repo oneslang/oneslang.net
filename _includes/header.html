@@ -1,16 +1,8 @@
 
-<li{% if page.title == 'go简介' %} class="active"{% endif %}><a href="/">首页</a></li>
-<li{% if page.title == '环境' %} class="active"{% endif %}><a href="/golang/env.html">环境</a></li>
-<li{% if page.title == '基础' %} class="active"{% endif %}><a href="/golang/basic.html">基础</a></li>
-<li{% if page.title == '指针' %} class="active"{% endif %}><a href="/golang/pointer.html">指针</a></li>
-<li{% if page.title == '函数' %} class="active"{% endif %}><a href="/golang/function.html">函数</a></li>
-<li{% if page.title == '包' %} class="active"{% endif %}><a href="/golang/package.html">包</a></li>
-<li{% if page.title == '接口' %} class="active"{% endif %}><a href="/golang/interface.html">接口</a></li>
-<li{% if page.title == '方法' %} class="active"{% endif %}><a href="/golang/method.html">方法</a></li>
-<li{% if page.title == '并发' %} class="active"{% endif %}><a href="/golang/concurrency.html">并发</a></li>
-<li{% if page.title == 'OOP' %} class="active"{% endif %}><a href="/golang/oop.html">OOP</a></li>
-<li{% if page.title == '惯例' %} class="active"{% endif %}><a href="/golang/convention.html">惯例</a></li>
-<li{% if page.title == '解惑' %} class="active"{% endif %}><a href="/golang/puzzle.html">解惑</a></li>
-<li{% if page.title == '备忘' %} class="active"{% endif %}><a href="/golang/memo.html">备忘</a></li>
-<li{% if page.title == '资源' %} class="active"{% endif %}><a href="/golang/resource.html">资源</a></li>
-
+{% for v in site[page.category] %}
+	{% if page.category == 'nav' %}
+		<li><a href="/{{v[0]}}/index.html">{{v[1]}}</a></li>
+	{% else %}
+		<li{% if page.name == v[0] %} class="active"{% endif %}><a href="/{{page.category}}/{{v[0]}}.html">{{v[1]}}</a></li>
+	{% endif %}
+{% endfor %}
