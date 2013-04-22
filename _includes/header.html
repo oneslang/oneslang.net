@@ -1,8 +1,4 @@
 
 {% for v in site[page.category] %}
-	{% if page.category == 'nav' %}
-		<li><a href="/{{v[0]}}/index.html">{{v[1]}}</a></li>
-	{% else %}
-		<li{% if page.name == v[0] %} class="active"{% endif %}><a href="/{{page.category}}/{{v[0]}}.html">{{v[1]}}</a></li>
-	{% endif %}
+	<li{% if page.name == v[0] %} class="active"{% endif %}><a href="/{{page.category}}/{{v[0]}}.html">{{v[1]}}</a></li>
 {% endfor %}

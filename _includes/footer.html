@@ -1,2 +1,4 @@
-Hosted by <a href='https://github.com/oneslang/oneslang.net/' target='_blank'>GitHub</a>
-and powered by <a href='https://github.com/mojombo/jekyll' target='_blank'>Jekyll</a>
+
+{% for v in site['nav'] %}
+	<li{% if page.category == v[0] %} class="active"{% endif %}><a href="/{{v[0]}}/index.html">{{v[1]}}</a></li>
+{% endfor %}

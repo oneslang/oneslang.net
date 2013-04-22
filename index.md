@@ -1,6 +1,6 @@
 ---
 layout: default
-category: nav
+category: index
 name: index
 ---
 
