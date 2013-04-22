@@ -8,24 +8,27 @@ description: golang
 markdown: kramdown
 pygments: true
 
-nav:
-  golang: Golang
+nav: {
+  golang: Golang,
   hadoop: Hadoop
-golang:
-  index: 简介
-  env: 环境
-  basic: 基础
-  pointer: 指针
-  function: 函数
-  package: 包
-  interface: 接口
-  method: 方法
-  concurrency: 并发
-  oop: OOP
-  convention: 惯例
-  puzzle: 解惑
-  memo: 备忘
+}
+golang: {
+  index: 简介,
+  env: 环境,
+  basic: 基础,
+  pointer: 指针,
+  function: 函数,
+  package: 包,
+  interface: 接口,
+  method: 方法,
+  concurrency: 并发,
+  oop: OOP,
+  convention: 惯例,
+  puzzle: 解惑,
+  memo: 备忘,
   resource: 资源
-hadoop:
-  index: 简介
+}
+hadoop: {
+  index: 简介,
   memo: 备忘
+}
