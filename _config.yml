@@ -28,4 +28,8 @@ golang:
   - [resource, 资源]
 hadoop:
   - [index, 简介]
+  - [concept, 概念]
+  - [install, 安装]
+  - [conf, 配置]
   - [memo, 备忘]
+  - [resource, 资源]
