@@ -1,7 +1,7 @@
 ---
 layout: page
 category: hadoop
-name: index
+name: conf
 title: 配置
 ---
 

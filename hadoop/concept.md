@@ -1,7 +1,7 @@
 ---
 layout: page
 category: hadoop
-name: index
+name: concept
 title: 简介
 ---
 
