@@ -61,6 +61,10 @@ title: 资源
 [英文](http://www.miek.nl/projects/learninggo/index.html)
 [中文](http://www.mikespook.com/learning-go)
 
+* 《The Way to Go》
+[英文](https://sites.google.com/site/thewaytogo2012)
+[中文](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/preface.md)
+
 * 《Go Web 编程》
 [中文](https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md)
 
