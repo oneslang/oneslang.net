@@ -11,6 +11,7 @@ pygments: true
 nav:
   - [golang, Golang]
   - [hadoop, Hadoop]
+  - [linux, Linux]
 golang:
   - [index, 简介]
   - [env, 环境]
@@ -33,3 +34,10 @@ hadoop:
   - [conf, 配置]
   - [memo, 备忘]
   - [resource, 资源]
+linux:
+  - [index, 简介]
+  - [dev, 设备]
+  - [permission, 文件权限]
+  - [env, 环境变量]
+  - [service, 服务管理]
+  - [network, 网络配置]

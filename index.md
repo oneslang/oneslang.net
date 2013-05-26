@@ -4,12 +4,21 @@ category: index
 name: index
 ---
 
+<div class="row-fluid">
+
 {% for nav in site.nav %}
-### {{nav[1]}}
+
+<div class="span2">
+<h3>{{nav[1]}}</h3>
+<ul>
 
 {% assign item = nav[0] %}
 {% for list in site[item] %}
-* [{{list[1]}}](/{{nav[0]}}/{{list[0]}}.html)
+<li><p><a href="/{{nav[0]}}/{{list[0]}}.html">{{list[1]}}</a></p></li>
 {% endfor %}
 
+</ul>
+</div>
 {% endfor %}
+
+</div>
