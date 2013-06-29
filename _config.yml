@@ -12,6 +12,7 @@ nav:
   - [golang, Golang]
   - [hadoop, Hadoop]
   - [linux, Linux]
+  - [java, Java]
 golang:
   - [index, 简介]
   - [env, 环境]
@@ -41,3 +42,10 @@ linux:
   - [env, 环境变量]
   - [service, 服务管理]
   - [network, 网络配置]
+java:
+  - [springmvc, SpringMVC3]
+  - [mybatis, Mybatis3]
+  - [shiro, Shiro]
+  - [mockito, Mockito]
+  - [selenium, Selenium]
+  - [sitemesh, SiteMesh2]
