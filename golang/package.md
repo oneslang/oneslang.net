@@ -32,15 +32,13 @@ func odd(i int) bool { // 私有函数：首字母小写
 {% highlight go %}
 package main
 import (
-	"strings"
-	e "./even" // 相对路径方式导入用户库；用别名访问该包公有成员
-	. "fmt" // 绝对路径方式导入标准库；可省略包名访问该包公有成员
-	_ "github.com/mattn/go-sqlite3" // 绝对路径方式导入用户库；无法访问该包公有成员但会调用该包init函数
-	"github.com/mattn/go-ole" // "github.com/mattn/go-ole"是路径，和包名没关系，包名在文件中通过“package ole”指定
+	e "./even"                      // 相对路径方式导入用户库；用别名访问该包公有成员
+	. "fmt"                         // 绝对路径方式导入标准库；可省略包名访问该包公有成员
+	_ "github.com/mattn/go-ole"     // 绝对路径方式导入用户库；无法访问该包公有成员但会调用该包init函数
+	_ "github.com/mattn/go-sqlite3" // "github.com/mattn/go-sqlite3"是路径，和包名无关，包名通过“package sqlite3”指定
 )
 func main() {
 	i := 5
-	Printf("Is %d even? %v\n", i, e.Even(i))
+	Printf("%d is even? %t\n", i, e.Even(i))
 }
 {% endhighlight %}
-
