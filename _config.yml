@@ -6,7 +6,7 @@ keywords: go,golang,oneslang,goroutine,channel,select,interface,panic,recover
 description: golang
 
 markdown: kramdown
-pygments: true
+highlighter: true
 
 nav:
   - [golang, Golang]
