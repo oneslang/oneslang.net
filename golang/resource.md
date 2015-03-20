@@ -7,25 +7,22 @@ title: 资源
 
 ### 官方
 * [官网](http://golang.org)
-[翻译1](http://zh-golang.appsp0t.com)
-[翻译2](http://zh.golanger.com)
-* [源码](https://code.google.com/p/go)
+[（翻译）](http://git.oschina.net/liudiwu/pkgdoc)
+* [源码](https://github.com/golang/go)
 
 ### 论坛
-* [Golang中国](http://www.golang.tc)
+* [Golang中国](http://www.golangtc.com)
+* [Go友团](http://golanghome.com)
 * [Go语言学习园地论坛](http://bbs.studygolang.com)
-* [Golang交流社区](http://bbs.gocn.im)
-* [GOLANG中国](http://www.golangcn.com)
 
 ### 博客
-* [Go语言学习园地博客](http://blog.studygolang.com)
-* [golang.in](http://golang.in)
-* [Golang技术博客](http://beego.me)
-* [Ajian](http://www.ohlinux.com/category/golang)
-* [Rhino](http://golanger.cn/?cat=3)
+* [Go语言学习园地博客](http://studygolang.com)
 * [mikespook](http://www.mikespook.com/tag/golang)
+* [Golang技术博客](http://beego.me)
+* [Rhino](http://golanger.cn/category/go)
 * [叶剑峰](http://www.cnblogs.com/yjf512/category/385369.html)
 * [runtime](http://runtime.diandian.com/)
+* [golang.in](http://golang.in)
 
 ### 文章
 * [Rob Pike：走进Go语言](http://www.csdn.net/article/2012-11-01/2811380-Go-in-Google)
@@ -37,10 +34,9 @@ title: 资源
 * [goroutine背后的系统知识](http://www.sizeofvoid.net/goroutine-under-the-hood)
 * [Go语言_反射篇](http://www.cnblogs.com/yjf512/archive/2012/06/10/2544391.html)
 * [Go 语言简介（下）— 特性](http://coolshell.cn/articles/8489.html)
-* [Go 1.1 函数调用](http://bbs.gocn.im/thread-118-1-1.html)
 
 ### 工具
-* [LiteIDE](https://code.google.com/p/golangide)
+* [LiteIDE](http://sourceforge.net/projects/liteide/files)
 * [Gocode](https://github.com/nsf/gocode)
 * [Go在线运行](http://play.golang.org)
 * [Go代码库在线文档](http://godoc.org)
@@ -54,8 +50,7 @@ title: 资源
 
 * 《A Tour of Go》
 [英文](http://tour.golang.org/#1)
-[中文1](http://tour.golanger.com/#1)
-[中文2](http://tour.golang.tc/#1)
+[中文](http://tour.golangtc.com)
 
 * 《Learning Go》
 [英文](http://www.miek.nl/projects/learninggo/index.html)
@@ -66,7 +61,7 @@ title: 资源
 [中文](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/preface.md)
 
 * 《Go Web 编程》
-[中文](https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md)
+[中文](https://github.com/astaxie/build-web-application-with-golang)
 
 * 《Go 学习笔记》
 [中文](https://github.com/qyuhen/book)
@@ -87,10 +82,25 @@ title: 资源
 [英文](http://www.qtrac.eu/gobook.html)
 
 ### 项目
-* [revel](https://github.com/robfig/revel)
+* [docker](https://github.com/docker/docker)
+* [lime](https://github.com/limetext/lime)
+* [syncthing](https://github.com/syncthing/syncthing)
+* [gogs](https://github.com/gogits/gogs)
+* [revel](https://github.com/revel/revel)
+* [martini](https://github.com/go-martini/martini)
+* [cayley](https://github.com/google/cayley)
+* [nsq](https://github.com/bitly/nsq)
+* [hugo](https://github.com/spf13/hugo)
+* [textql](https://github.com/dinedal/textql)
+* [godropbox](https://github.com/dropbox/godropbox)
+* [gin](https://github.com/gin-gonic/gin)
+* [cli](https://github.com/codegangsta/cli)
+* [negroni](https://github.com/codegangsta/negroni)
+* [goji](https://github.com/zenazn/goji)
+* [ui](https://github.com/andlabs/ui)
+* [gxui](https://github.com/google/gxui)
 * [mux](https://github.com/gorilla/mux)
-* [go-mysql-driver](https://code.google.com/p/go-mysql-driver)
-* [mgo](https://launchpad.net/mgo)
-* [gorp](https://github.com/coopernurse/gorp)
+* [mgo](https://github.com/go-mgo/mgo)
+* [gorp](https://github.com/go-gorp/gorp)
 * [hood](https://github.com/eaigner/hood)
 * [gopher](https://github.com/jimmykuu/gopher)
