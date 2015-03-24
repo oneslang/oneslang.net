@@ -60,6 +60,58 @@ struct    元素零值对应类型的零值
 // complex*:complex64,complex128
 {% endhighlight %}
 
+### 变量
+{% highlight go %}
+package main
+
+func main() {
+	// 变量声明：
+	var a1 string
+	var b1 bool
+	var c1 int
+	var d1 float32
+	println(a1, b1, c1, d1) // output:"" false 0 0.0
+
+	// 变量声明赋值：
+	var a2 string = "str2"
+	var b2 bool = true
+	var c2 int = 22
+	var d2 float32 = 22.2
+	println(a2, b2, c2, d2) // output:"str2" true 22 22.2
+
+	// 变量类型推断：
+	var a3 = "str3"
+	var b3 = true
+	var c3 = 33
+	var d3 = 33.3
+	println(a3, b3, c3, d3) // output:"str3" true 33 33.3
+
+	// 简写方式（只可用在函数内）：
+	a4 := "str4"
+	b4 := true
+	c4 := 44
+	d4 := 44.4
+	println(a4, b4, c4, d4) // output:"str4" true 44 44.4
+
+	// 多个变量声明：
+	var (
+		a5            string
+		b5            bool = true
+		c5, c55, c555      = 5, 55, 555
+		d5, d55       float32
+	)
+	println(a5, b5, c5, c55, c555, d5, d55) // output:"" true 5 55 555 0.0 0.0
+
+	// 平行赋值：
+	a, b := 10, true
+	println(a, b) // output:10 true
+
+	// 特殊的变量名：任何赋给它的值都被丢弃
+	_, c := 15, 20
+	println(c) // output:20
+}
+{% endhighlight %}
+
 ### 常量
 {% highlight go %}
 const ( // 常量只能是数字、字符串或布尔值
@@ -89,43 +141,32 @@ const (
 )
 {% endhighlight %}
 
-### 变量
-{% highlight go %}
-// 变量声明：
-var a, c int
-var b bool
-
-// 变量声明赋值：
-var a, c int = 15, 20
-var b bool = true
-
-// 变量类型推断：
-var a, c = 15, 20
-var b = true
-
-// 简写方式（只可用在函数内）：
-a, c := 15, 20
-b := true
-
-// 多个变量声明：
-var (
-    a, c int
-    b bool = true
-)
-
-// 平行赋值：
-a, b := 20, true
-
-// 特殊的变量名：任何赋给它的值都被丢弃
-_, c := 15, 20
-{% endhighlight %}
-
 ### string
 {% highlight go %}
-s := `Starting part
-      Ending part`
+a := 'a'                // 单个字符
+b := "abc"              // 字符串
+c := `Starting part
+			\r\n
+      Ending part`      // 多行字符，不做转义处理
+
+s := "Hello, World!"
+s1 := s[0]                    // H
+s2 := s[:5]                   // Hello
+s3 := s[7:]                   // World!
+s4 := s[1:5]                  // ello
 {% endhighlight %}
 
+package main
+func main() {
+    s := "abcd"
+    bs := []byte(s)
+    bs[1] = 'B'
+    println(string(bs))    // output:aBcd
+    u := "电脑"
+    us := []rune(u)
+    us[1] = '话'
+    println(string(us))    // output:电话
+}
 ### array
 {% highlight go %}
 var a [3]int
