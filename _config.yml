@@ -7,7 +7,6 @@ description: golang
 
 markdown: kramdown
 highlighter: rouge
-#highlighter: pygments
 
 nav:
   - [golang, Golang]
