@@ -7,7 +7,7 @@ title: 资源
 
 ### 官方
 * [官网](http://golang.org)
-[（翻译）](http://git.oschina.net/liudiwu/pkgdoc)
+[(翻译)](http://git.oschina.net/liudiwu/pkgdoc)
 * [源码](https://github.com/golang/go)
 
 ### 论坛
