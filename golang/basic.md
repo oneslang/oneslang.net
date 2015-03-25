@@ -60,6 +60,28 @@ struct    元素零值对应类型的零值
 // complex*:complex64,complex128
 {% endhighlight %}
 
+### Hello World
+{% highlight go %}
+/*
+ 源代码必须以package <name>开头
+ 可执行文件必须是package main
+*/
+package main
+
+// 将fmt包加入main，不是main的其他包都被称为库
+import "fmt"
+
+// 当Go程序在执行的时候，首先调用的函数是main.main()
+func main() {
+	/*
+		fmt包的函数打印字符串到屏幕
+		字符串用双引号
+		并且可以包含非ASCII的字符，这里使用了中文
+	*/
+	fmt.Println("Hello, 世界") // output:Hello, 世界
+}
+{% endhighlight %}
+
 ### 变量
 {% highlight go %}
 package main
@@ -93,7 +115,7 @@ func main() {
 	d4 := 44.4
 	println(a4, b4, c4, d4) // output:"str4" true 44 44.4
 
-	// 多个变量声明：
+	// 多个变量声明赋值：
 	var (
 		a5            string
 		b5            bool = true
@@ -114,31 +136,52 @@ func main() {
 
 ### 常量
 {% highlight go %}
+package main
+
+import "unsafe"
+
 const ( // 常量只能是数字、字符串或布尔值
-    a = 0
-    b = 0.0
-    c string = "0"
-    d bool = false
+	a1        = 0
+	b1        = 0.0
+	c1 string = "0"
+	d1 bool   = false
 )
 
 const (
-    a = "abc"  // a == "abc"
-    b          // b == "abc" (可以省略重复的赋值)
-    c = len(a) // c == 3 (常量值可以是len()、cap()、unsafe.Sizeof()常量计算表达式的值)
+	a2 = "abc"             // a2 == "abc"
+	b2                     // b2 == "abc" (可以省略重复的赋值)
+	c2 = len(a2)           // c2 == 3 (常量值可以是len()、cap()、unsafe.Sizeof()常量计算表达式的值)
+	d2 = unsafe.Sizeof(c2) // d2 == 8 (数据所占用的字节数)
+)
+
+func main() {
+	const x = "xxx" // 未使用局部常量不会引发编译错误。
+}
+{% endhighlight %}
+
+### 枚举
+{% highlight go %}
+package main
+
+import "unsafe"
+
+const ( // 常量只能是数字、字符串或布尔值
+	a1        = 0
+	b1        = 0.0
+	c1 string = "0"
+	d1 bool   = false
 )
 
 const (
-    a = iota // a == 0 (iota在每个const开头都会被重设为0)
-    b        // b == 1 (可以省略重复的赋值，当iota再次在新的一行使用时，它的值会增加1)
+	a2 = "abc"             // a2 == "abc"
+	b2                     // b2 == "abc" (可以省略重复的赋值)
+	c2 = len(a2)           // c2 == 3 (常量值可以是len()、cap()、unsafe.Sizeof()常量计算表达式的值)
+	d2 = unsafe.Sizeof(c2) // d2 == 8 (数据所占用的字节数)
 )
 
-const (
-    a = 1 << iota // a == 1
-    b             // b == 2
-    c             // c == 4
-    d             // d == 8
-    e = a | b     // e == 3
-)
+func main() {
+	const x = "xxx" // 未使用局部常量不会引发编译错误。
+}
 {% endhighlight %}
 
 ### string
