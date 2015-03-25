@@ -73,11 +73,7 @@ import "fmt"
 
 // 当Go程序在执行的时候，首先调用的函数是main.main()
 func main() {
-	/*
-		fmt包的函数打印字符串到屏幕
-		字符串用双引号
-		并且可以包含非ASCII的字符，这里使用了中文
-	*/
+	// fmt包的函数打印字符串到屏幕
 	fmt.Println("Hello, 世界") // output:Hello, 世界
 }
 {% endhighlight %}
@@ -140,22 +136,24 @@ package main
 
 import "unsafe"
 
-const ( // 常量只能是数字、字符串或布尔值
-	a1        = 0
-	b1        = 0.0
-	c1 string = "0"
-	d1 bool   = false
+// 常量只能是数字、字符串或布尔值
+const (
+	i        = 0
+	f        = 0.0
+	s string = "0"
+	b bool   = false
 )
 
+// 常量值还可以是len、cap、unsafe.Sizeof等编译期可确定结果的函数返回值
 const (
-	a2 = "abc"             // a2 == "abc"
-	b2                     // b2 == "abc" (可以省略重复的赋值)
-	c2 = len(a2)           // c2 == 3 (常量值可以是len()、cap()、unsafe.Sizeof()常量计算表达式的值)
-	d2 = unsafe.Sizeof(c2) // d2 == 8 (数据所占用的字节数)
+	s1 = "abc"             // s1 == "abc"
+	s2                     // s2 == "abc" (可以省略重复的赋值)
+	i1 = len(s1)           // i1 == 3 (字符串长度)
+	i2 = unsafe.Sizeof(s1) // i2 == 8 (数据所占用的字节数)
 )
 
 func main() {
-	const x = "xxx" // 未使用局部常量不会引发编译错误。
+	const c = "xxx" // 未使用局部常量不会引发编译错误
 }
 {% endhighlight %}
 
@@ -163,24 +161,43 @@ func main() {
 {% highlight go %}
 package main
 
-import "unsafe"
+// 关键字iota定义常量组中从0开始按行计数的自增枚举值
+const (
+	Sunday    = iota // 0
+	Monday           // 1，通常省略后续行表达式
+	Tuesday          // 2
+	Wednesday        // 3
+	Thursday         // 4
+	Friday           // 5
+	Saturday         // 6
+)
 
-const ( // 常量只能是数字、字符串或布尔值
-	a1        = 0
-	b1        = 0.0
-	c1 string = "0"
-	d1 bool   = false
+// 如果iota自增被打断，须显式恢复
+const (
+	A = iota // 0
+	B        // 1
+	C = "c"  // c
+	D        // c，与上一行相同。
+	E = iota // 4，显式恢复，注意计数包含了C、D两行
+	F        // 5
 )
 
 const (
-	a2 = "abc"             // a2 == "abc"
-	b2                     // b2 == "abc" (可以省略重复的赋值)
-	c2 = len(a2)           // c2 == 3 (常量值可以是len()、cap()、unsafe.Sizeof()常量计算表达式的值)
-	d2 = unsafe.Sizeof(c2) // d2 == 8 (数据所占用的字节数)
+	a = 1 << iota // 1，左移位
+	b             // 2
+	c             // 4
+	d             // 8
+	e = a | b     // 3，按位或
+)
+
+// 在同一常量组中，可以提供多个iota，它们各自增长
+const (
+	AA, BB = iota, iota << 10 // 0, 0 << 10
+	CC, DD                    // 1, 1 << 10
 )
 
 func main() {
-	const x = "xxx" // 未使用局部常量不会引发编译错误。
+	println(AA, BB, CC, DD) // output:0 0 1 1024
 }
 {% endhighlight %}
 
