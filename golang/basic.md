@@ -84,44 +84,44 @@ package main
 
 func main() {
 	// 变量声明
-	var a1 string
+	var s1 string
 	var b1 bool
-	var c1 int
-	var d1 float32
-	println(a1, b1, c1, d1) // output:"" false 0 0.0
+	var i1 int
+	var f1 float32
+	println(s1, b1, i1, f1) // output:"" false 0 0.0
 
 	// 变量声明赋值
-	var a2 string = "str2"
+	var s2 string = "str2"
 	var b2 bool = true
-	var c2 int = 22
-	var d2 float32 = 22.2
-	println(a2, b2, c2, d2) // output:"str2" true 22 22.2
+	var i2 int = 22
+	var f2 float32 = 22.2
+	println(s2, b2, i2, f2) // output:"str2" true 22 22.2
 
 	// 变量类型推断
-	var a3 = "str3"
+	var s3 = "str3"
 	var b3 = true
-	var c3 = 33
-	var d3 = 33.3
-	println(a3, b3, c3, d3) // output:"str3" true 33 33.3
+	var i3 = 33
+	var f3 = 33.3
+	println(s3, b3, i3, f3) // output:"str3" true 33 33.3
 
 	// 简写方式（只可用在函数内）
-	a4 := "str4"
+	s4 := "str4"
 	b4 := true
-	c4 := 44
-	d4 := 44.4
-	println(a4, b4, c4, d4) // output:"str4" true 44 44.4
+	i4 := 44
+	f4 := 44.4
+	println(s4, b4, i4, f4) // output:"str4" true 44 44.4
 
 	// 多个变量声明赋值
-	var c5, c55, c555 = 5, 55, 555
+	var i5, i55, i555 = 5, 55, 555
 	var (
-		a5      string
+		s5      string
 		b5      bool = true		
-		d5, d55 float32
+		f5, f55 float32
 	)
-	println(a5, b5, c5, c55, c555, d5, d55) // output:"" true 5 55 555 0.0 0.0
+	println(i5, i55, i555, s5, b5, f5, f55) // output:5 55 555 "" true 0.0 0.0
 
 	// 平行赋值
-	a, b := 10, true
+	i, b := 10, true
 	println(a, b) // output:10 true
 
 	// 特殊的变量名：任何赋给它的值都被丢弃
