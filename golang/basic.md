@@ -214,7 +214,6 @@ s1 := s[0]                    // H
 s2 := s[:5]                   // Hello
 s3 := s[7:]                   // World!
 s4 := s[1:5]                  // ello
-{% endhighlight %}
 
 package main
 func main() {
@@ -227,6 +226,7 @@ func main() {
     us[1] = '话'
     println(string(us))    // output:电话
 }
+{% endhighlight %}
 ### array
 {% highlight go %}
 var a [3]int
