@@ -45,6 +45,7 @@ linux:
   - [service, 服务管理]
   - [network, 网络配置]
 java:
+  - [index, 简介]
   - [springmvc, SpringMVC3]
   - [mybatis, Mybatis3]
   - [shiro, Shiro]
